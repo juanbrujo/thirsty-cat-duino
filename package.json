@@ -1,0 +1,14 @@
+{
+  "name": "arduino.js",
+  "version": "0.0.1",
+  "description": "",
+  "main": "full.js",
+  "scripts": {
+    "start": "node full.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "johnny-five": "^0.10.6"
+  }
+}
