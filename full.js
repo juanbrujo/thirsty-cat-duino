@@ -10,7 +10,7 @@ board.on("ready", function () {
     pin: "A0"
   });
 
-  //const led = new five.Led(11);
+  var led = new five.Led(13);
   var relay = new five.Relay(9);
 
   relay.off();
@@ -23,8 +23,10 @@ board.on("ready", function () {
 
     if (approach >= minApproach && approach <= maxApproach) {
       relay.on();
+      led.on();
     } else {
       relay.off();
+      led.off();
     }
   });
 });
