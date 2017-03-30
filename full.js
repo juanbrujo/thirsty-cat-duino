@@ -10,23 +10,20 @@ board.on("ready", function () {
     pin: "A0"
   });
 
-  var led = new five.Led(13);
   var relay = new five.Relay(9);
 
   relay.off();
 
-  proximity.on("data", function () {
+   proximity.on("data", function () {
 
     var approach = this.cm;
-    var minApproach = 5;
-    var maxApproach = 50;
+    var minApproach = 1;
+    var maxApproach = 10;
 
     if (approach >= minApproach && approach <= maxApproach) {
       relay.on();
-      led.on();
     } else {
       relay.off();
-      led.off();
     }
   });
 });
